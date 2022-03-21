@@ -1,12 +1,20 @@
 package EX2;
 
-//Carro.java:
+//Carro:
 public class Carro {
     private final int velocidadeMaxima = 200;
     private String matricula;
     private int velocidadeAtual;
     private Condutor condutor;
     private final boolean ligado;
+
+    public Condutor getCondutor() {
+        return this.condutor;
+    }
+
+    public void setCondutor(Condutor condutor) {
+        this.condutor = condutor;
+    }
 
     public Carro() {
         this.ligado = false;
@@ -28,21 +36,14 @@ public class Carro {
         return this.velocidadeMaxima;
     }
 
-    public Condutor getCondutor() {
-        return this.condutor;
-    }
-
-    public void setCondutor(Condutor condutor) {
-        this.condutor = condutor;
-    }
-
     void acelerar() {
         if (this.ligado) {
             this.velocidadeAtual += 10 + this.condutor.getDestreza() * 0.1;
             if (this.velocidadeAtual > this.velocidadeMaxima)
                 this.velocidadeAtual = this.velocidadeMaxima;
-        } else
+        } else {
             System.out.println("O	Carro	não	pode	acelerar	pois	está	desligado!");
+        }
     }
 
     void travar(int intensidadeTravagem) {
@@ -59,8 +60,8 @@ public class Carro {
         } else
             System.out.println("O	Carro	não	pode	travar	pois	está	desligado!");
     }
-}
 
     public void buzinar() {
-        System.out.println(“Buzina do carro”)
+        System.out.println("Buzina do carro.");
     }
+}
