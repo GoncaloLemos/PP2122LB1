@@ -1,3 +1,5 @@
+package EX2;
+
 //Carro.java:
 public class Carro {
     private String matricula;

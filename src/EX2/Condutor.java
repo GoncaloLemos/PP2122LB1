@@ -1,3 +1,5 @@
+package EX2;
+
 //Condutor.java:
 public class Condutor {
     //Atributos
