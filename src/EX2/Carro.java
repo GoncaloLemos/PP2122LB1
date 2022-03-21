@@ -2,9 +2,9 @@ package EX2;
 
 //Carro.java:
 public class Carro {
+    private final int velocidadeMaxima = 200;
     private String matricula;
     private int velocidadeAtual;
-    private final int velocidadeMaxima = 200;
     private Condutor condutor;
     private boolean ligado;
 
@@ -12,16 +12,12 @@ public class Carro {
         this.ligado = false;
     }
 
-    public void setMatricula(String nome) {
-        this.matricula = nome;
-    }
-
-    public void setCondutor(Condutor condutor) {
-        this.condutor = condutor;
-    }
-
     public String getMatricula() {
         return this.matricula;
+    }
+
+    public void setMatricula(String nome) {
+        this.matricula = nome;
     }
 
     public int getVelocidadeAtual() {
@@ -34,6 +30,10 @@ public class Carro {
 
     public Condutor getCondutor() {
         return this.condutor;
+    }
+
+    public void setCondutor(Condutor condutor) {
+        this.condutor = condutor;
     }
 
     void acelerar() {
