@@ -47,3 +47,6 @@ void	acelerar()	{
 								}	else
 												System.out.println("O	Carro	não	pode	travar	pois	está	desligado!");		}		
 }
+public	void	buzinar()	{
+		System.out.println(“Buzina	do	carro”);
+}	
