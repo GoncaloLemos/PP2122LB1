@@ -1,15 +1,17 @@
 package EX2;
 
-//Condutor.java:
+//Condutor
 public class Condutor {
     //Atributos
     private String nome;
     private int idade;
     private int destreza;
 
+    //Construtores
     public Condutor() {
     }
 
+    //Métodos
     public String getNome() {
         return this.nome;
     }

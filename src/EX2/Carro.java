@@ -1,23 +1,26 @@
 package EX2;
 
-//Carro:
+//Carro
 public class Carro {
+    //Atributos
     private final int velocidadeMaxima = 200;
     private String matricula;
     private int velocidadeAtual;
     private Condutor condutor;
-    private final boolean ligado;
+    private boolean ligado;
 
+    //Construtores
+    public Carro() {
+        this.ligado = false;
+    }
+
+    //Métodos
     public Condutor getCondutor() {
         return this.condutor;
     }
 
     public void setCondutor(Condutor condutor) {
         this.condutor = condutor;
-    }
-
-    public Carro() {
-        this.ligado = false;
     }
 
     public String getMatricula() {
@@ -63,5 +66,15 @@ public class Carro {
 
     public void buzinar() {
         System.out.println("Buzina do carro.");
+    }
+
+    public void ligar() {
+        this.ligado = true;
+        System.out.println("Carro Ligado.");
+    }
+
+    public void desligar() {
+        this.ligado = false;
+        System.out.println("Carro Desligado.");
     }
 }

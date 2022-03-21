@@ -1,42 +1,40 @@
 package EX2;
 
+//Corrida
 public class Corrida {
-    //construtores
+    //Construtores
     public Corrida() {
     }
 
     //Métodos
     public static void main(String[] args) {
-        Carro carro1 = new Carro();
-        Carro carro2 = new Carro();
-        carro1.setMatricula("11 - AA - 11");
-        carro2.setMatricula("22 - BB - 22");
-        Condutor condutor1 = new Condutor();
-        Condutor condutor2 = new Condutor();
-        condutor1.setNome("Antonio");
-        condutor1.setIdade(25);
-        condutor1.setDestreza(75);
-        condutor2.setNome("Manuel");
-        condutor2.setIdade(27);
-        condutor2.setDestreza(65);
-        carro1.setCondutor(condutor1);
-        carro2.setCondutor(condutor2);
-        //Liga os carros
-        carro1.ligar();
-        carro2.ligar();
-        //Inicia a corrida
-        carro1.acelerar();
-        carro2.acelerar();
-        carro1.acelerar();
-        carro2.travar(10);
-        carro1.acelerar();
-        carro1.acelerar();
-        carro1.travar(5);
-        carro2.acelerar();
-        System.out.println("Velocidade do carro1: " + carro1.getVelocidadeAtual());
-        System.out.println("Velocidade do carro2: " + carro2.getVelocidadeAtual());
-        //Desliga os carros
-        carro1.desligar();
-        carro2.desligar();
+        Carro C1 = new Carro();
+        Carro C2 = new Carro();
+        C1.setMatricula("11 - AA - 11");
+        C2.setMatricula("22 - BB - 22");
+        Condutor D1 = new Condutor();
+        Condutor D2 = new Condutor();
+        D1.setNome("Antonio");
+        D1.setIdade(25);
+        D1.setDestreza(75);
+        D2.setNome("Manuel");
+        D2.setIdade(27);
+        D2.setDestreza(65);
+        C1.setCondutor(D1);
+        C2.setCondutor(D2);
+        C1.ligar();
+        C2.ligar();
+        C1.acelerar();
+        C2.acelerar();
+        C1.acelerar();
+        C2.travar(10);
+        C1.acelerar();
+        C1.acelerar();
+        C1.travar(5);
+        C2.acelerar();
+        System.out.println("Velocidade [Carro 1]: " + C1.getVelocidadeAtual());
+        System.out.println("Velocidade [Carro 2]: " + C2.getVelocidadeAtual());
+        C1.desligar();
+        C2.desligar();
     }
 }
