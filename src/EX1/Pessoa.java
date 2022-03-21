@@ -1,6 +1,6 @@
 package EX1;
 
-class Pessoa {
+public class Pessoa {
     public String getNome() {
         return nome;
     }

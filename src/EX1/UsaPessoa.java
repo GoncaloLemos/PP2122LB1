@@ -1,6 +1,5 @@
 package EX1;
 
-
 import java.util.Scanner;
 
 public class UsaPessoa {
@@ -8,17 +7,21 @@ public class UsaPessoa {
     }
 
     public static void main(String[] args) {
-        Pessoa P1 = new Pessoa();
-        P1.setNome("Camila");
-        P1.setGenero('F');
-        P1.setIdade(12);
-        System.out.println("O objeto P1 chama-se " + P1.getNome() + ", é do sexo " + P1.getGenero() + ", tem " + P1.getIdade() + " anos e diz: ");
-        P1.falar();
-        Pessoa P2 = new Pessoa();
-        Scanner S = new Scanner(System.in);
-        System.out.println("Nome: ");
-        P2.setNome(S.nextLine());
-        P2.setIdade(S.nextInt());
-        P2.setGenero(S.nextLine().charAt(0));
+        final Scanner S = new Scanner(System.in);
+        try {
+            Pessoa P = new Pessoa();
+            System.out.println("Nome: ");
+            P.setNome(S.next());
+            System.out.println("Idade: ");
+            P.setIdade(S.nextInt());
+            System.out.println("Género: ");
+            var G = S.next();
+            P.setGenero(G.charAt(0));
+            System.out.println("Nome: " + P.getNome() + "; Género: " + P.getGenero() + "; Idade: " + P.getIdade() + ".");
+            S.close();
+        } catch (final Exception ignored) {
+            System.out.println("Instrução inválida.");
+            System.exit(0);
+        }
     }
 }
