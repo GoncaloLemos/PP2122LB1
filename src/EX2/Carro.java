@@ -6,7 +6,7 @@ public class Carro {
     private String matricula;
     private int velocidadeAtual;
     private Condutor condutor;
-    private boolean ligado;
+    private final boolean ligado;
 
     public Carro() {
         this.ligado = false;
@@ -62,5 +62,5 @@ public class Carro {
 }
 
     public void buzinar() {
-        System.out.println(“Buzina do carro”);
+        System.out.println(“Buzina do carro”)
     }

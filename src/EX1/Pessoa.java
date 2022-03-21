@@ -1,6 +1,30 @@
 package EX1;
 
 class Pessoa {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public char getGenero() {
+        return genero;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
     private String nome;
     private char genero;
     private int idade;
@@ -16,5 +40,9 @@ class Pessoa {
     public Pessoa(String n, char g, int i) {
         this(n, g); // usa o construtor anterior
         this.idade = i;
+    }
+
+    void falar() {
+
     }
 }

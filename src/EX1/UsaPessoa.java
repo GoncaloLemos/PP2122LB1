@@ -1,5 +1,6 @@
 package EX1;
 
+
 import java.util.Scanner;
 
 public class UsaPessoa {
@@ -7,16 +8,17 @@ public class UsaPessoa {
     }
 
     public static void main(String[] args) {
-        //Declara objeto pessoa1
-        Pessoa pessoa1 = new Pessoa();
-        pessoa1.setNome("Camila");
-        pessoa1.setGenero('F');
-        pessoa1.setIdade(12);
-        System.out.println("O objeto pessoa1 chama-se " + pessoa1.getNome() + ", é do sexo " + pessoa1.getGenero() + ", tem " + pessoa1.getIdade() + " anos e diz: ");
-        pessoa1.falar();
+        Pessoa P1 = new Pessoa();
+        P1.setNome("Camila");
+        P1.setGenero('F');
+        P1.setIdade(12);
+        System.out.println("O objeto P1 chama-se " + P1.getNome() + ", é do sexo " + P1.getGenero() + ", tem " + P1.getIdade() + " anos e diz: ");
+        P1.falar();
         Pessoa P2 = new Pessoa();
         Scanner S = new Scanner(System.in);
         System.out.println("Nome: ");
-        Scanner.NextLine()
+        P2.setNome(S.nextLine());
+        P2.setIdade(S.nextInt());
+        P2.setGenero(S.nextLine().charAt(0));
     }
 }
