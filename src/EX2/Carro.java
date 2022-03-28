@@ -5,7 +5,7 @@ public class Carro {
     //Atributos
     private final int velocidadeMaxima = 200;
     private String matricula;
-    private int velocidadeAtual;
+    private int velocidadeAtual = 0;
     private Condutor condutor;
     private boolean ligado;
 
@@ -67,17 +67,17 @@ public class Carro {
             System.out.println("O Carro não pode travar pois está desligado!");
     }
 
-    public void buzinar() {
-        System.out.println("Buzina do carro.");
-    }
-
     public void ligar() {
         this.ligado = true;
-        System.out.println(“VRUUUUMmmmmmmmmm”); }
+        System.out.println("VRUUUUMmmmmmmmmm");
     }
 
     public void desligar() {
         this.ligado = false;
-        System.out.println(“MMMmmmmm”); }
+        System.out.println("MMMmmmmm");
+    }
+
+    public boolean IsOn() {
+        return this.ligado;
     }
 }

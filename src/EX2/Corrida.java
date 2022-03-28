@@ -14,17 +14,18 @@ public class Corrida {
         C2.setMatricula("22 - BB - 22");
         Condutor D1 = new Condutor();
         Condutor D2 = new Condutor();
-        D1.setNome("Antonio");
+        D1.setNome("António");
         D1.setIdade(25);
-        D1.setDestreza(75);
+        D1.setDestreza(5);
         D2.setNome("Manuel");
-        D2.setIdade(27);
-        D2.setDestreza(65);
+        D2.setIdade(10);
+        D2.setDestreza(95);
         C1.setCondutor(D1);
         C2.setCondutor(D2);
-        C1.ligar();
-        C2.ligar();
-        C1.acelerar();
+        if (!C1.IsOn() & !C2.IsOn()) {
+            C1.ligar();
+            C2.ligar();
+        }
         C2.acelerar();
         C1.acelerar();
         C2.travar(10);
@@ -34,7 +35,9 @@ public class Corrida {
         C2.acelerar();
         System.out.println("Velocidade [Carro 1]: " + C1.getVelocidadeAtual());
         System.out.println("Velocidade [Carro 2]: " + C2.getVelocidadeAtual());
-        C1.desligar();
-        C2.desligar();
+        if (C1.IsOn() & C2.IsOn()) {
+            C1.desligar();
+            C2.desligar();
+        }
     }
 }
