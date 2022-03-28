@@ -1,6 +1,9 @@
 package EX2;
 
-//Carro
+/**
+ * @author Pedro Simões (30007732@students.ual.pt);
+ *         Gonçalo Lemos (30007523@students.ual.pt).
+ */
 public class Carro {
     //Atributos
     private final int velocidadeMaxima = 200;
