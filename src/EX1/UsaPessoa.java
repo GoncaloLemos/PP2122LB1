@@ -2,6 +2,10 @@ package EX1;
 
 import java.util.Scanner;
 
+/**
+ * @author Pedro Simões (30007732@students.ual.pt);
+ *         Gonçalo Lemos (30007523@students.ual.pt).
+ */
 public class UsaPessoa {
     public UsaPessoa() {
     }
